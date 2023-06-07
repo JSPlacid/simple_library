@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+
+{% block title %}
+<div style="text-align: center;">
+<h1>Simple library</h1>
+<p>Welcome! <br> Home for scholars</p>
+</div>
+{% endblock %}
+
+{% block content %}
+  <h2>Simple Library Home</h2>
+  <p>
+    Welcome to simple Library, home for scholars
+  </p>
+  <h3>Content overview</h3>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Books:</strong> {{ num_books }}</li>
+    <li><strong>Copies:</strong> {{ num_instances }}</li>
+    <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+    <li><strong>Authors:</strong> {{ num_authors }}</li>
+  </ul>
+
+  <p>
+    You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.
+  </p>
+{% endblock %}

@@ -1,0 +1,15 @@
+
+.sidebar-nav {
+   margin-top: 20px;
+   padding: 0;
+}
+
+.sidebar-nav a {
+   display: inline-block;
+   text-decoration: none;
+}
+
+ul li a[href='*'] {
+   text-decoration: none;
+   /* list-style: none; */
+}
