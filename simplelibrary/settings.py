@@ -62,7 +62,7 @@ MIDDLEWARE = [
 ]
 
 # trusted token added for deployment
-CSRF_TRUSTED_ORIGINS = ['simplelibrary-production-b159.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://simplelibrary-production-b159.up.railway.app']
 
 
 # During development/for this tutorial you can instead set just the base URL
