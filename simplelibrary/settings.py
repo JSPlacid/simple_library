@@ -29,10 +29,10 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'pac$f(z=m-@^*3b2u3j)h0%i99i0#u
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
-# DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['pacifictechemp.tech']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -59,12 +60,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'simplelibrary.urls'
 # ******* added for deploy purposes *******
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = False
 
-SESSION_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = False
 
-CSRF_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = False
 # *******add ends here***********
+
 import os # needed by code below
 
 TEMPLATES = [
@@ -132,12 +134,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
+
 STATIC_ROOT = BASE_DIR / 'staticfiles'  #. os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+
+# Simplified static file serving.
+# https://pypi.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -146,4 +154,9 @@ LOGIN_REDIRECT_URL = '/'
 
 # for email testing purposes
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Update database configuration from $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
