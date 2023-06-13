@@ -36,7 +36,6 @@ git clone https://github.com/JSPlacid/simple_library.git
 ```
 2. Navigate to the project directory:
 from your command line or terminal
-
 `cd simple_library`
 
 3. Create a virtual environment:
@@ -78,7 +77,7 @@ Once the Simple Library Project is set up, follow these steps to use it:
 2. Log in to the admin dashboard at http://localhost:8000/admin using the created admin credentials.
 
 3. From the admin dashboard, you can perform the following actions:
-   - Manage Books: Add, edit, and delete books. Enter details such as title, author, publication date, and ISBN.
+   Manage Books: Add, edit, and delete books. Enter details such as title, author, publication date, and ISBN.
    - Manage Authors: Add, edit, and delete authors. Provide information such as name and biography.
    - Manage Library Members: Add, edit, and delete library members. Keep track of their borrowing history.
 
@@ -108,7 +107,7 @@ Contributions to the Simple Library Project are welcome!  To contribute:
 Please follow the coding style and conventions already established in the project.
 
 ## Testing
-the catalog/test/ directory contains all test modules implemented in the project.
+the `catalog/test/` directory contains all test modules implemented in the project.
 To run the test suite for the Django Simple Library Project, execute the following command:
 
 `python manage.py test`
