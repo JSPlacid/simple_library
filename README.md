@@ -38,6 +38,7 @@ git clone https://github.com/JSPlacid/simple_library.git
 from your command line or terminal
 
 `cd simple_library`
+
 3. Create a virtual environment:
 from your command line or terminal
 ```
@@ -50,7 +51,7 @@ mkdir virtualenv
 On Windows:
 `venv\Scripts\activate`
 
-On macOS/Linux:
+   On macOS/Linux:
 `source venv/bin/activate`
 
 5. Install the dependencies:
@@ -61,7 +62,7 @@ On macOS/Linux:
 python manage.py makemigrations
 python manage.py migrate
 ```
-n.b: python3 manage.py for macOS
+N.B: python3 manage.py for macOS
 
 7. Start the development server:
 `python manage.py runserver 8080`
