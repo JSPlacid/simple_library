@@ -35,8 +35,8 @@ from your command line or terminal
 git clone https://github.com/JSPlacid/simple_library.git
 ```
 2. Navigate to the project directory:
-from your command line or terminal
-`cd simple_library`
+from your command line or terminal 
+   `cd simple_library`
 
 3. Create a virtual environment:
 from your command line or terminal
@@ -50,7 +50,7 @@ mkdir virtualenv
 On Windows:
 `venv\Scripts\activate`
 
-   On macOS/Linux:
+   On macOS/Linux:  
 `source venv/bin/activate`
 
 5. Install the dependencies:
