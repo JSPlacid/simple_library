@@ -39,7 +39,7 @@ ALLOWED_HOSTS = ['simplelibrary-production-b159.up.railway.app', '127.0.0.1', 'w
 # ALLOWED_HOSTS = ['.railway.com','127.0.0.1']
 
 # trusted token added for deployment
-CSRF_TRUSTED_ORIGINS = ['https://simplelibrary-production-b159.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://simplelibrary-production-b159.up.railway.app', 'https://www.pacifictechemp.tech']
 
 # Application definition
 
