@@ -32,11 +32,14 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'pac$f(z=m-@^*3b2u3j)h0%i99i0#u
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['simplelibrary-production-b159.up.railway.app', '127.0.0.1']
+ALLOWED_HOSTS = ['simplelibrary-production-b159.up.railway.app', '127.0.0.1', 'www.pacifictechemp.tech']
 
 # During development, you can instead set just the base URL
 # (you might decide to change the site a few times).
 # ALLOWED_HOSTS = ['.railway.com','127.0.0.1']
+
+# trusted token added for deployment
+CSRF_TRUSTED_ORIGINS = ['https://simplelibrary-production-b159.up.railway.app']
 
 # Application definition
 
@@ -60,9 +63,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-# trusted token added for deployment
-CSRF_TRUSTED_ORIGINS = ['https://simplelibrary-production-b159.up.railway.app']
 
 
 # During development/for this tutorial you can instead set just the base URL
